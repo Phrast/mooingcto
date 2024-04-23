@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link href="css/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore $MOO, a Solana meme coin inspired by cows and their iconic mooing sounds. Join the herd and dive into the world of decentralized finance on the Solana blockchain.">
+    <meta name="keywords" content="$MOO, Solana, meme coin, cow, mooing, cryptocurrency, decentralized finance, Solana blockchain">
+    <meta name="author" content="$MOO">
+    <meta property="og:title" content="$MOO - Solana Meme Coin">
+    <meta property="og:description" content="Explore $MOO, a Solana meme coin inspired by cows and their iconic mooing sounds. Join the herd and dive into the world of decentralized finance on the Solana blockchain.">
+    <meta property="twitter:title" content="$MOO - Solana Meme Coin">
+    <meta property="twitter:description" content="Explore $MOO, a Solana meme coin inspired by cows and their iconic mooing sounds. Join the herd and dive into the world of decentralized finance on the Solana blockchain.">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>MOOING</title>
+</head>
+
+<body>   
+    <div id="cloud-container" class="overflow-hidden"></div>
+    <main class="h-[100vh] flex flex-col z-20 relative">
+        <div class="max-w-[1620px] w-full mx-auto p-4 pb-0 h-full flex flex-col">
+
+            <div class="flex flex-row sm:justify-between gap-x-4 items-center mb-12 sm:mt-0 mt-12 justify-center">
+
+                <div class="md:max-w-[180px] max-w-[100px] w-full sm:block hidden">
+                    <img src="img/logo.png" alt="Logo">
+                </div>
+
+                <div class="flex justify-center items-center text-center gap-x-8 text-black">
+
+                    <a href="https://dexscreener.com/solana/7y7v9pvs4yxuetuyjq8jte1bp3ri9x5mtnracaq5p6pk" class="cursor-pointer sm:text-3xl text-2xl text-grey transform transition-transform hover:scale-110 uppercase">
+                        Chart
+                    </a>
+    
+                    <a href="https://x.com/MooingC14959" class="cursor-pointer sm:text-3xl text-2xl text-grey transform transition-transform hover:scale-110 uppercase">
+                        Twitter
+                    </a>
+                    <a href="https://t.me/MOO_CTO" class="cursor-pointer sm:text-3xl text-2xl text-grey transform transition-transform hover:scale-110 uppercase">
+                        Telegram
+                    </a>
+                </div>
+
+                <div class="sm:block hidden">
+                    <a href="https://raydium.io/swap/?outputCurrency=tQgbAEjr9nt7oKZHSjtmEFtCdGx6vkU8WMupHXCQGuY" class="p-4 md:px-8 px-6 rounded-full bg-pink border-2 border-white text-black md:text-3xl text-2xl">Buy $MOO</a>
+                </div>
+
+            </div>
+
+            <div class="md:mt-0 mt-[20%] w-full flex justify-center gap-x-8 gap-y-8 items-center md:flex-row flex-col md:mb-0 mb-12">
+                <div>
+                
+                    <div class="mb-8 max-w-[650px]">
+                        <img class="cursor-pointer hero w-full mx-auto cow" src="img/cow.png" alt="Image">
+                    </div>
+
+                    <div class="md:mb-0 mb-8">
+                        <img class="max-w-[400px] shadow" src="img/shadow.png" alt="Shadow">
+                    </div>
+                </div>
+                
+                <div class="max-w-[700px]">
+                   <img src="img/text.png" alt="MOOING">
+                </div>
+
+            </div>
+
+            <div class="mb-12">
+                <a class="px-4 py-1 flex lg:gap-x-8 gap-x-2 justify-between lg:w-[240px] w-[220px] items-center mx-auto bg-black text-white rounded-lg cursor-pointer" href="https://www.pump.fun/CZTYxTRagFLqdXbNiQbQkcK1Nz5FJxocqV5T2hC2uEa9">
+                    <div>
+                        <img class="max-w-[40px] w-full" src="img/pump.png" alt="Image">
+                    </div>
+
+                    <div class="flex flex-col font-poppins uppercase">
+                        <p class="lg:text-lg text-md">Live On</p>
+                        <p class="lg:text-2xl text-xl font-bold">Raydium</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div
+            x-data="{}"
+            x-init="$nextTick(() => {
+                let ul = $refs.logos;
+                ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                ul.nextSibling.setAttribute('aria-hidden', 'true');
+            })"
+            class="mt-auto w-full inline-flex flex-nowrap overflow-hidden bg-pink"
+        >
+            <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll">
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+                <li class="text-white text-4xl">
+                    $MOO
+                </li>
+    
+                <li class="text-grey text-4xl">
+                    $MOO
+                </li>
+            </ul>                
+        </div>
+    </main>
+
+
+    <div class="cloud">
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+
+
+</html>
